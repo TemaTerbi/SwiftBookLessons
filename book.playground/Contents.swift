@@ -978,7 +978,7 @@ struct Chessman2 {
 }
 
 var whiteKing = Chessman2(color: .white, type: .king)
-whiteKing.setCoordinate(char: "C", num: 3)
+whiteKing.setCoordinate(char: "C", num: 4)
 whiteKing.kill()
 var blackKing = Chessman2(color: .black, type: .king, coordinate: ("A",2), symbol: "\u{265A}")
 
