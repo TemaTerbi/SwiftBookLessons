@@ -1027,3 +1027,41 @@ user2.aboutUser()
  Структуры это value Type - данные передаются копированием
  Class это reference Type - данные это ссылки, тобишь ссылаются на одину и ту же ячейку в памяти
  */
+
+
+//Lessons Properties
+
+//ex1
+
+class RandomNumberGenerator {
+    var min: Int
+    var max: Int
+    
+    init(max: Int, min: Int) {
+        self.max = max
+        self.min = min
+    }
+    
+    func getNumber() -> Int {
+        let result = Int.random(in: min...max)
+        return result
+    }
+}
+
+struct Employee {
+    var firstName: String
+    var secondName: String
+    var salary: Int
+    
+    func getInfoAboutPerson() {
+        print("\(firstName) \(secondName) - \(salary)")
+    }
+}
+
+
+var arrayNameFive = ["Artem", "Max", "Polina", "Robert", "Sasha"]
+var arraySecondNameFive = ["Solovev", "Dumilin", "Gonchar", "Ivanov", "Pushkin"]
+
+var salary = RandomNumberGenerator(max: 100000, min: 20000)
+var somePerson = Employee(firstName: arrayNameFive.randomElement()!, secondName: arraySecondNameFive.randomElement()!, salary: salary.getNumber())
+somePerson.getInfoAboutPerson()
