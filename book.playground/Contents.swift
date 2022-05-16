@@ -1065,3 +1065,37 @@ var arraySecondNameFive = ["Solovev", "Dumilin", "Gonchar", "Ivanov", "Pushkin"]
 var salary = RandomNumberGenerator(max: 100000, min: 20000)
 var somePerson = Employee(firstName: arrayNameFive.randomElement()!, secondName: arraySecondNameFive.randomElement()!, salary: salary.getNumber())
 somePerson.getInfoAboutPerson()
+
+
+
+//Lessons Init & deinit
+
+//ex1
+
+enum DayOfWeek: Int {
+    case Monday = 1
+    case Tuesday = 2
+    case Wednesday = 3
+    case Thursday = 4
+    case Friday = 5
+    
+    init?(day:String) {
+        switch day{
+            case "Понедельник":
+                self = .Monday
+            case "Вторник":
+                self = .Tuesday
+            case "Среда":
+                self = .Wednesday
+            case "Четверг":
+                self = .Thursday
+            case "Пятница":
+                self = .Friday
+            default:
+                return nil
+        }
+    }
+}
+
+var dayyy = DayOfWeek(day: "Среда")
+dayyy!.rawValue
