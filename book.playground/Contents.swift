@@ -909,8 +909,8 @@ enum Day:String {
 }
 
 let mon = Day.Monday
-print(mon.label)
-print(Day.Friday.label)
+print(mon.label) //Понедельник
+print(Day.Friday.label) //Пятница
 
 
 //Lessons Sructur
@@ -1099,3 +1099,22 @@ enum DayOfWeek: Int {
 
 var dayyy = DayOfWeek(day: "Среда")
 dayyy!.rawValue
+
+
+//Lessons extensions
+
+//ex1
+
+
+extension Int {
+    var asDouble: Double {return Double(self)}
+    var asFloat: Float {return Float(self)}
+    var asString: String {return String(self)}
+}
+
+let testExten: Int = 20
+
+print(testExten.asDouble)
+print(testExten.asFloat)
+print(testExten.asString)
+
